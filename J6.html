@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>제이쿼리</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+  var ex_show = $('.ex_show');
+  var ex_hide = $('.ex_hide');
+  var ex_box = $('.ex_box');
+  ex_show.click(function(){
+    ex_box.fadeIn(3000);
+  });
+  ex_hide.click(function(){
+    ex_box.fadeOut(3000);
+  });
+});
+</script>
+<style type="text/css">
+.ex_show{float:left;margin-right:20px;cursor:pointer}
+.ex_hide{float:left;cursor:pointer}
+.ex_box{clear:both; float:left; width:100px; height:50px; background-color:pink; border:1px solid skyblue; margin:50px; border-radius:10px}</style>
+</head>
+<body>
+<b class="ex_show">show</b>
+<b class="ex_hide">hide</b>
+<div class="ex_box"></div>
+</body>
+</html>
