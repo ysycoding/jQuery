@@ -1,0 +1,50 @@
+<!--
+mouseenter와 mouseleave
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>제이쿼리</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+  $('.yellow_circle').mouseenter(function(){
+    $('.yellow_circle_word').text('마우스 포인터가 원 안에 있습니다. ');
+  });
+  $('.yellow_circle').mouseleave(function(){
+    $('.yellow_circle_word').text('마우스 포인터가 원을 떠났습니다. ');
+  });
+});
+</script>
+</head>
+<body>
+<div class="yellow_circle" style="width:40px;height:40px;border-radius:20px;background:green"></div>
+<p class="yellow_circle_word">원에 마우스 포인터를 올리고 내려 보세요.</p>
+</body>
+</html>-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>제이쿼리</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+  var hover1 = $('.hover1');
+  hover1.hover(function(){
+    hover1.css('border','5px solid pink');
+  },function(){
+    hover1.css('border','5px solid green');
+  });
+});
+</script>
+<style>
+.hover1{width:100px; height:50px; background:yellow}
+</style>
+</head>
+<body>
+<div class="hover1"></div>
+</div>
+</body>
+</html>
