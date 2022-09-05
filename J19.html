@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery 선택한 파일 목록보기</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+    $("#fileUpload").change(function(){
+    fileList = $("#fileUpload")[0].files;
+    fileListTag = '';
+    for(i = 0; i < fileList.length; i++){
+        fileListTag += "<li>"+fileList[i].name+"</li>";
+    }
+    $('#fileList').html(fileListTag);
+});
+});
+</script>
+</head>
+<body>
+    <form method="post" action="upload-multiple.php" enctype="multipart/form-data">
+        <input type="file" id="fileUpload" name="upload[]" multiple>
+        <!-- 여기에 파일 목록 태그 추가 -->
+        <ul id="fileList"></ul>
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>
