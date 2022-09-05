@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>제이쿼리</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+    if($('input').is(":checked") == true){
+        $('b').text('체크');
+    }else{
+        $('b').text('체크안됨');
+    }
+});
+</script>
+<style>
+</style>
+</head>
+<body>
+    <input type="checkbox" />
+    <b></b>
+</body>
+</html>
